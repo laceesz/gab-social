@@ -1,0 +1,17 @@
+name: Unzip GAB.com OpenSource
+
+on:
+  push:
+    branches: [ main ]
+
+jobs:
+  unzip:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      - name: Unzip GAB.com OpenSource file
+        run: |
+          unzip gab-opensource.zip
